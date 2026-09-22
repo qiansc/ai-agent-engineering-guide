@@ -1,4 +1,4 @@
-app = "qiansc-ai-agent-guide"
+app = "ai-agent-engineering-guide"
 primary_region = "nrt"
 
 [env]
