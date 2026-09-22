@@ -73,7 +73,7 @@
   function progressMetric(kind, id = "") {
     const { done, total, percent } = progressStats(kind, id);
     const unit = kind === "phase" ? "天" : "篇";
-    return `<span class="progress-metric" data-progress-kind="${kind}" data-progress-id="${escapeHtml(id)}"><span class="progress-ring" style="--progress:${percent}%" role="progressbar" aria-label="学习进度 ${percent}%" aria-valuenow="${done}" aria-valuemin="0" aria-valuemax="${total}"></span><span class="progress-fraction">${percent}% · ${done}/${total} ${unit}</span></span>`;
+    return `<span class="progress-metric" data-progress-kind="${kind}" data-progress-id="${escapeHtml(id)}"><span class="progress-ring" style="--progress:${percent}%" role="progressbar" aria-label="学习进度 ${percent}%" aria-valuenow="${done}" aria-valuemin="0" aria-valuemax="${total}"></span><span class="progress-fraction">${done}/${total} ${unit}</span></span>`;
   }
   function progressCard(kind, title, id = "") {
     return `<div class="progress-summary"><div class="progress-summary-copy"><span>${escapeHtml(title)}</span>${progressMetric(kind, id)}</div></div>`;
@@ -91,7 +91,7 @@
       ring.setAttribute("aria-label", `学习进度 ${percent}%`);
       ring.setAttribute("aria-valuenow", done);
       ring.setAttribute("aria-valuemax", total);
-      metric.querySelector(".progress-fraction").textContent = `${percent}% · ${done}/${total} ${metric.dataset.progressKind === "phase" ? "天" : "篇"}`;
+      metric.querySelector(".progress-fraction").textContent = `${done}/${total} ${metric.dataset.progressKind === "phase" ? "天" : "篇"}`;
     });
     document.querySelectorAll("[data-article-id]").forEach((link) => link.classList.toggle("completed", completedArticles.has(link.dataset.articleId)));
     document.querySelectorAll("[data-day-card]").forEach((card) => {
