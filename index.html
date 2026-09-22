@@ -38,10 +38,11 @@
       <button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="关闭目录"></button>
 
       <main id="main-content" tabindex="-1"></main>
-      <aside class="toc" id="toc" aria-label="本页目录"></aside>
+      <div class="toc-rail">
+        <aside class="toc" id="toc" aria-label="本页目录"></aside>
+        <button class="complete-fab" id="complete-button" type="button" aria-pressed="false" hidden><span class="complete-fab-icon" aria-hidden="true">✓</span><span class="complete-fab-label">我学完了</span></button>
+      </div>
     </div>
-
-    <button class="complete-fab" id="complete-button" type="button" aria-pressed="false" hidden><span class="complete-fab-icon" aria-hidden="true">✓</span><span class="complete-fab-label">我学完了</span></button>
 
     <dialog class="search-dialog" id="search-dialog">
       <form method="dialog" class="search-shell">
