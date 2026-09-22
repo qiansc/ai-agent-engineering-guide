@@ -115,14 +115,14 @@ code, pre, kbd { font-family: "SFMono-Regular", Consolas, "Liberation Mono", mon
 
 #main-content { grid-column: 2; width: 100%; min-width: 0; min-height: calc(100vh - var(--topbar-height)); margin: 0; padding: 46px var(--page-gutter) 96px; outline: none; }
 body[data-page="home"] #main-content, body[data-page="section"] #main-content { grid-column: 2 / -1; }
-.toc-rail { position: sticky; grid-column: 3; align-self: start; top: calc(var(--topbar-height) + 42px); display: flex; flex-direction: column; align-items: flex-end; width: var(--toc-width); max-height: calc(100vh - var(--topbar-height) - 72px); margin-top: 42px; }
+.toc-rail { position: sticky; grid-column: 3; align-self: start; top: calc(var(--topbar-height) + 42px); display: flex; flex-direction: column; align-items: flex-end; gap: 16px; width: var(--toc-width); height: calc(100vh - var(--topbar-height) - 72px); margin-top: 42px; }
 body:not([data-page="article"]) .toc-rail { display: none; }
 .toc { width: 100%; min-height: 0; overflow: auto; padding: 0 26px 16px 18px; border-left: 1px solid var(--line); color: var(--muted); font-size: 12px; }
 .toc strong { display: block; margin-bottom: 8px; color: var(--text); font-size: 12px; }
 .toc a { display: block; padding: 4px 0; color: var(--muted); line-height: 1.55; }
 .toc a:hover, .toc a.active { color: var(--brand); }
 .toc a.level-3 { padding-left: 12px; }
-.complete-fab { z-index: 45; flex: none; display: inline-flex; align-items: center; gap: 9px; min-height: 46px; margin: 16px 26px 0 0; padding: 7px 17px 7px 8px; border: 1px solid var(--brand); border-radius: 999px; color: white; background: var(--brand); box-shadow: 0 12px 30px rgb(37 99 235 / 25%); font-size: 13px; font-weight: 700; cursor: pointer; }
+.complete-fab { z-index: 45; flex: none; display: inline-flex; align-items: center; gap: 9px; min-height: 46px; margin: auto 26px 0 0; padding: 7px 17px 7px 8px; border: 1px solid var(--brand); border-radius: 999px; color: white; background: var(--brand); box-shadow: 0 12px 30px rgb(37 99 235 / 25%); font-size: 13px; font-weight: 700; cursor: pointer; }
 .complete-fab:hover { background: var(--brand-strong); }
 .complete-fab.done { color: var(--brand); background: var(--bg); }
 .complete-fab.done:hover { background: var(--surface-strong); }
@@ -311,7 +311,7 @@ html[data-theme="dark"] .button.primary { color: #101827; }
 @media (max-width: 1499px) {
   :root { --toc-width: 0px; }
   .app-shell { grid-template-columns: var(--sidebar-width) minmax(0, 1fr); }
-  .toc-rail { position: static; display: contents; width: auto; max-height: none; margin: 0; }
+  .toc-rail { position: static; display: contents; width: auto; height: auto; margin: 0; }
   .toc { display: none; }
   .complete-fab { position: fixed; right: 26px; bottom: 26px; margin: 0; }
   .mobile-toc { display: block; }
