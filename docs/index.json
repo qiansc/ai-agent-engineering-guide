@@ -1,0 +1,1016 @@
+{
+  "meta": {
+    "title": "AI Agent 工程学习站",
+    "updated": "2026-09-22",
+    "description": "面向 AI Agent 应用、Infra 与 FDE 的中文工程学习站。"
+  },
+  "groups": [
+    {
+      "id": "start",
+      "title": "开始学习",
+      "short": "入门",
+      "description": "先搭地图，再决定从哪里下钻。",
+      "chapters": [
+        { "id": "foundations", "title": "建立认知", "articles": ["agent-map", "learning-path"] },
+        { "id": "roles", "title": "岗位定位与项目练习", "articles": ["role-map", "backend-transition-plan", "project-ladder", "project-reading-guide"] }
+      ]
+    },
+    {
+      "id": "core",
+      "title": "核心机制",
+      "short": "机制",
+      "description": "理解 Agent 如何循环、用工具、管理上下文与知识。",
+      "chapters": [
+        { "id": "action", "title": "行动闭环", "articles": ["agent-loop", "tool-use"] },
+        { "id": "knowledge", "title": "上下文与知识", "articles": ["context-pipeline", "context-memory", "rag"] }
+      ]
+    },
+    {
+      "id": "runtime",
+      "title": "Agent 工程",
+      "short": "工程",
+      "description": "把 Demo 变成可持续运行的软件系统。",
+      "chapters": [
+        { "id": "execution", "title": "运行与执行", "articles": ["harness", "coding-agent", "workflow-runtime"] },
+        { "id": "collaboration", "title": "连接与协作", "articles": ["protocols", "multi-agent", "browser-cua"] }
+      ]
+    },
+    {
+      "id": "production",
+      "title": "生产与治理",
+      "short": "生产",
+      "description": "评测、安全、观测和上线策略。",
+      "chapters": [
+        { "id": "quality", "title": "质量与边界", "articles": ["eval-observability", "security"] },
+        { "id": "delivery", "title": "发布与维护", "articles": ["deployment-lifecycle", "production"] }
+      ]
+    },
+    {
+      "id": "course",
+      "title": "逐章学习",
+      "short": "课程",
+      "description": "按完整课程线动手：从基础 Agent、框架与生产设计，到亲手实现 Coding Agent。",
+      "chapters": [
+        {
+          "id": "agent-foundations-frameworks",
+          "title": "Agent 基础与框架选型",
+          "sections": [
+            {"title":"从技术栈到执行框架","articles":["architecture-layers","framework-ecosystem"]},
+            {"title":"两套运行时的具体做法","articles":["openai-agents-sdk","langgraph-stateful-workflow"]}
+          ]
+        },
+        {
+          "id": "agent-foundations-course",
+          "title": "从零构建 Agent",
+          "sections": [
+            {
+              "title": "概念与最小闭环",
+              "articles": [
+                "hf-00-course-map",
+                "hf-00-learning-setup",
+                "hf-01-agent-definition",
+                "hf-02-llm-for-agents",
+                "hf-03-messages-and-templates",
+                "hf-04-tool-design",
+                "hf-05-thought-action-observation",
+                "hf-06-minimal-agent-from-scratch",
+                "hf-07-first-smolagents-agent",
+                "hf-08-framework-choice"
+              ]
+            },
+            {
+              "title": "工具、检索与协作",
+              "articles": [
+                "hf-09-smolagents-code-agent",
+                "hf-10-smolagents-tool-calling",
+                "hf-11-smolagents-tools",
+                "hf-12-smolagents-retrieval",
+                "hf-13-smolagents-vision",
+                "hf-14-visual-browser-agent",
+                "hf-15-smolagents-multi-agent",
+                "hf-16-unit1-exercises"
+              ]
+            },
+            {
+              "title": "框架工作流",
+              "articles": [
+                "hf-17-langgraph-foundations",
+                "hf-18-langgraph-email",
+                "hf-19-langgraph-document-agent",
+                "hf-20-llamaindex-orientation",
+                "hf-21-llamaindex-rag-pipeline",
+                "hf-22-llamaindex-tools",
+                "hf-23-llamaindex-agents",
+                "hf-24-llamaindex-workflows",
+                "hf-25-unit2-framework-exercises"
+              ]
+            },
+            {
+              "title": "项目挑战与进阶",
+              "articles": [
+                "hf-26-gala-guest-retrieval",
+                "hf-27-gala-external-tools",
+                "hf-28-gala-agent-integration",
+                "hf-29-gaia-benchmark",
+                "hf-30-gaia-final-project"
+              ]
+            },
+            {
+              "title": "函数调用深入",
+              "articles": [
+                "hf-31-function-calling-protocol",
+                "hf-32-function-calling-finetune",
+                "hf-38-function-calling-finetune-notebook"
+              ]
+            },
+            {
+              "title": "观测与评测",
+              "articles": [
+                "hf-33-agent-observability",
+                "hf-34-agent-telemetry-workshop"
+              ]
+            },
+            {
+              "title": "游戏 Agent 项目",
+              "articles": [
+                "hf-35-game-agents",
+                "hf-36-pokemon-battle-agent",
+                "hf-37-pokemon-battle-launch"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-engineering-course",
+          "title": "从设计到生产",
+          "sections": [
+            {
+              "title": "起步、设计与工具",
+              "articles": [
+                "ms-00-setup",
+                "ms-01-agent-basics",
+                "ms-02-frameworks",
+                "ms-03-design-principles",
+                "ms-04-tool-pattern"
+              ]
+            },
+            {
+              "title": "检索、规划与协作",
+              "articles": [
+                "ms-05-agentic-rag",
+                "ms-06-trustworthy",
+                "ms-07-planning",
+                "ms-08-multi-agent",
+                "ms-09a-metacognition",
+                "ms-09b-corrective-rag",
+                "ms-09c-code-and-sql"
+              ]
+            },
+            {
+              "title": "生产、协议与记忆",
+              "articles": [
+                "ms-10-observability-evaluation",
+                "ms-11-protocols",
+                "ms-12-context-engineering",
+                "ms-13-memory"
+              ]
+            },
+            {
+              "title": "框架、部署与审计",
+              "articles": [
+                "ms-14a-framework",
+                "ms-14b-workflows-hosting",
+                "ms-15-browser-use",
+                "ms-16a-deployment",
+                "ms-16b-support-lab",
+                "ms-17-local-agents",
+                "ms-18a-signed-receipts",
+                "ms-18b-approval-receipts"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "coding-agent-course",
+          "title": "亲手实现 Coding Agent",
+          "sections": [
+            {
+              "title": "循环、工具与权限",
+              "articles": [
+                "lc-s01-agent-loop",
+                "lc-s02-tool-use",
+                "lc-s03-permission",
+                "lc-s04-hooks"
+              ]
+            },
+            {
+              "title": "计划、子任务与记忆",
+              "articles": [
+                "lc-s05-todo-write",
+                "lc-s06-subagent",
+                "lc-s07-skill-loading",
+                "lc-s08-context-compact",
+                "lc-s09-memory"
+              ]
+            },
+            {
+              "title": "持久任务与协作",
+              "articles": [
+                "lc-s10-task-system",
+                "lc-s11-background-tasks",
+                "lc-s12-cron-scheduler",
+                "lc-s13-agent-teams"
+              ]
+            },
+            {
+              "title": "协议与集成运行时",
+              "articles": [
+                "lc-s14-mcp-tools",
+                "lc-s15-integrated-harness",
+                "lc-s16-workflow-runtime",
+                "lc-s17-goal-loop"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "engineering-topics",
+          "title": "Agent 工程专题",
+          "sections": [
+            {"title":"设计模式与搜索","articles":["pattern-01-choice","pattern-02-react","pattern-03-plan-reflection","pattern-04-search","pattern-05-multiagent-workflow"]},
+            {"title":"编码 Agent 与 AgentOS","articles":["coding-01-architecture","coding-02-tools-permissions","coding-03-repository-context","coding-04-collaboration-skills","coding-05-client-remote","coding-06-evaluation","coding-07-agentos-routing","coding-08-runtime-lifecycle"]},
+            {"title":"工具与 Agent 协议","articles":["protocol-01-landscape","protocol-02-function-calling","protocol-03-mcp-core","protocol-04-mcp-server-security","protocol-05-a2a-core","protocol-06-enterprise-platform"]}
+          ]
+        },
+        {
+          "id": "advanced-topics",
+          "title": "记忆、安全与企业平台",
+          "sections": [
+            {"title":"记忆与上下文","articles":["memory-01-context","memory-02-types-rag","memory-03-lifecycle","memory-04-context-window","memory-05-storage-security","memory-06-skills-project"]},
+            {"title":"安全评测与 AgentOps","articles":["ops-01-risk","ops-02-guardrails","ops-03-evaluation","ops-04-tracing","ops-05-release","ops-06-scenarios"]},
+            {"title":"企业平台","articles":["platform-01-control-plane","platform-02-core-modules","platform-03-multitenancy","platform-04-product","platform-05-operations","platform-06-selection"]}
+          ]
+        },
+        {
+          "id": "harness-evolution",
+          "title": "Harness 与长期运行",
+          "sections": [
+            {"title":"Harness 可测实验","articles":["harness-01-foundations","harness-02-task-environment-runner","harness-03-trace-grading","harness-04-scenarios","harness-05-release-gates","harness-06-enterprise-platform"]},
+            {"title":"自进化与平台运行时","articles":["evolution-01-learning-loop","evolution-02-multiplatform-runtime","evolution-03-registries-plugins","evolution-04-curator","evolution-05-safety-checkpoint","evolution-06-trajectory-rl-platform"]}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interview",
+      "title": "面试准备",
+      "short": "面试",
+      "description": "用工程证据回答 2026 年的真实追问。",
+      "chapters": [
+        { "id": "signals", "title": "近期信号", "articles": ["interview-signals"] },
+        { "id": "projects", "title": "方案与项目", "articles": ["system-design", "project-story", "fde"] },
+        { "id": "questions", "title": "题库与训练", "articles": ["question-bank", "evidence-map"] },
+        { "id": "specialties", "title": "专项补齐", "articles": ["backend-basics", "model-basics", "failure-matrix", "ai-coding-interview", "source-guide"] },
+        { "id": "real-cases", "title": "真实面试逐场复盘", "sections": [{ "title": "8 月：项目与 Agent 架构", "articles": ["case-insta360-agent-2026-08-09", "case-xiaohongshu-agent-2026-08-09", "case-tiktok-2026-08-09", "case-xiaohongshu-agent-2026-08-12", "case-bytedance-2026-08-12", "case-baidu-meg-2026-08-18", "case-meituan-agent-2026-08-23"] }, { "title": "三轮连续深挖", "articles": ["case-baidu-coding-agent-three-rounds"] }, { "title": "9 月：业务与工程可靠性", "articles": ["case-yaowu-ai-app-2026-09-07", "case-baidu-agent-2026-09-07", "case-xiaohongshu-ondevice-2026-09-14", "case-bytedance-agent-2026-09-15", "case-bytedance-agent-2026-09-16", "case-meituan-agent-2026-09-16"] }, { "title": "英文案例与现场实作", "articles": ["case-scale-2026-07", "case-harvey-document-agent-2026-08"] }] }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "id": "agent-map",
+      "group": "start",
+      "title": "先画清地图：Agent 到底是什么",
+      "description": "从任务闭环出发，分清 Chatbot、Workflow、Copilot 与 Agent。",
+      "tags": [
+        "Agent",
+        "Workflow",
+        "LLM",
+        "入门"
+      ],
+      "path": "start/agent-map.md"
+    },
+    {
+      "id": "learning-path",
+      "group": "start",
+      "title": "怎么学：从最小闭环到生产系统",
+      "description": "一条以交付物为中心的学习路线，避免陷入框架收集。",
+      "tags": [
+        "学习路线",
+        "项目",
+        "30 天"
+      ],
+      "path": "start/learning-path.md"
+    },
+    {
+      "id": "role-map",
+      "group": "start",
+      "title": "岗位地图：应用、Infra 与 FDE",
+      "description": "看懂不同 AI 岗位真正交付什么，以及准备重点如何变化。",
+      "tags": [
+        "岗位",
+        "FDE",
+        "AI 应用",
+        "Infra"
+      ],
+      "path": "start/role-map.md"
+    },
+    {
+      "id": "agent-loop",
+      "group": "core",
+      "title": "Agent Loop：推理、动作与终止",
+      "description": "不用框架理解 ReAct 循环，以及死循环、震荡和假完成怎样处理。",
+      "tags": [
+        "ReAct",
+        "Loop",
+        "终止条件",
+        "状态机"
+      ],
+      "path": "core/agent-loop.md"
+    },
+    {
+      "id": "tool-use",
+      "group": "core",
+      "title": "工具调用：把非确定性关进确定性接口",
+      "description": "Schema、校验、超时、重试、幂等、审批和错误回传。",
+      "tags": [
+        "Tool Use",
+        "Function Calling",
+        "幂等",
+        "权限"
+      ],
+      "path": "core/tool-use.md"
+    },
+    {
+      "id": "context-pipeline",
+      "group": "core",
+      "title": "上下文工程：Write、Select、Compress、Isolate",
+      "description": "把上下文当成有来源、权限、预算和版本的数据管线，而不是一段越长越好的 Prompt。",
+      "tags": [
+        "Context Engineering",
+        "Selection",
+        "Isolation",
+        "Token Budget"
+      ],
+      "path": "core/context-pipeline.md"
+    },
+    {
+      "id": "context-memory",
+      "group": "core",
+      "title": "Context 与 Memory：该记什么，该忘什么",
+      "description": "区分消息历史、运行状态和长期记忆，建立可评测的压缩策略。",
+      "tags": [
+        "Context Engineering",
+        "Memory",
+        "Compaction"
+      ],
+      "path": "core/context-memory.md"
+    },
+    {
+      "id": "rag",
+      "group": "core",
+      "title": "Agentic RAG：从检索流水线到诊断系统",
+      "description": "解析、切分、混合检索、rerank、权限与端到端评测。",
+      "tags": [
+        "RAG",
+        "Hybrid Search",
+        "Rerank",
+        "Recall"
+      ],
+      "path": "core/rag.md"
+    },
+    {
+      "id": "harness",
+      "group": "runtime",
+      "title": "Harness：模型之外的工程主体",
+      "description": "Framework、orchestrator、runtime、sandbox 与 harness 的职责分层。",
+      "tags": [
+        "Harness",
+        "Runtime",
+        "Orchestrator",
+        "Sandbox"
+      ],
+      "path": "runtime/harness.md"
+    },
+    {
+      "id": "coding-agent",
+      "group": "runtime",
+      "title": "Coding Agent：文件、命令与反馈闭环",
+      "description": "从工具分发到权限、压缩、工作区隔离与验证。",
+      "tags": [
+        "Coding Agent",
+        "AI Coding",
+        "Worktree",
+        "权限"
+      ],
+      "path": "runtime/coding-agent.md"
+    },
+    {
+      "id": "workflow-runtime",
+      "group": "runtime",
+      "title": "Workflow Runtime：Hooks、Task DAG 与 Goal Gate",
+      "description": "把扩展点、持久任务、后台执行、恢复日志和完成判定放进同一运行时。",
+      "tags": [
+        "Workflow",
+        "Hooks",
+        "Task DAG",
+        "Goal Gate"
+      ],
+      "path": "runtime/workflow-runtime.md"
+    },
+    {
+      "id": "protocols",
+      "group": "runtime",
+      "title": "MCP、A2A 与 Skills：连接层不要混用",
+      "description": "工具协议、Agent 协作协议和按需知识包分别解决什么。",
+      "tags": [
+        "MCP",
+        "A2A",
+        "Skills",
+        "Protocol"
+      ],
+      "path": "runtime/protocols.md"
+    },
+    {
+      "id": "multi-agent",
+      "group": "runtime",
+      "title": "多 Agent：何时拆，怎样合",
+      "description": "从单 Agent 的极限出发，理解 manager、handoff、并行与冲突控制。",
+      "tags": [
+        "Multi-Agent",
+        "Handoff",
+        "Manager",
+        "并行"
+      ],
+      "path": "runtime/multi-agent.md"
+    },
+    {
+      "id": "browser-cua",
+      "group": "runtime",
+      "title": "Browser / Computer Use：把视觉操作做成工程",
+      "description": "观察、定位、操作、校验，以及高风险动作的人机边界。",
+      "tags": [
+        "Computer Use",
+        "Browser Agent",
+        "GUI",
+        "HITL"
+      ],
+      "path": "runtime/browser-cua.md"
+    },
+    {
+      "id": "eval-observability",
+      "group": "production",
+      "title": "Eval 与 Observability：从结果追到轨迹",
+      "description": "建立 outcome、trajectory、tool、safety 四层评测和最小 trace。",
+      "tags": [
+        "Eval",
+        "Trace",
+        "LLM-as-Judge",
+        "Observability"
+      ],
+      "path": "production/eval-observability.md"
+    },
+    {
+      "id": "security",
+      "group": "production",
+      "title": "安全与 Guardrails：权限必须在模型之外",
+      "description": "Prompt injection、数据越权、SSRF、沙箱与 human-in-the-loop。",
+      "tags": [
+        "Security",
+        "Guardrails",
+        "Prompt Injection",
+        "Sandbox"
+      ],
+      "path": "production/security.md"
+    },
+    {
+      "id": "deployment-lifecycle",
+      "group": "production",
+      "title": "从原型到退役：部署形态、队列与版本生命周期",
+      "description": "选择自托管或托管 runtime，建立背压、质量门、版本回滚和退役清理。",
+      "tags": [
+        "Deployment",
+        "Backpressure",
+        "Release Gate",
+        "Lifecycle"
+      ],
+      "path": "production/deployment-lifecycle.md"
+    },
+    {
+      "id": "production",
+      "group": "production",
+      "title": "上线：状态、恢复、成本与降级",
+      "description": "让长任务能暂停、续跑、取消、回滚，并在压力下可控退化。",
+      "tags": [
+        "Production",
+        "Checkpoint",
+        "Retry",
+        "Cost"
+      ],
+      "path": "production/production.md"
+    },
+    {
+      "id": "interview-signals",
+      "group": "interview",
+      "title": "2026 年 8–9 月面试信号",
+      "description": "从近期一手样本提炼高频变化，不把社区帖子当官方题库。",
+      "tags": [
+        "面经",
+        "2026",
+        "趋势",
+        "高频"
+      ],
+      "path": "interview/interview-signals.md"
+    },
+    {
+      "id": "system-design",
+      "group": "interview",
+      "title": "Agent 系统设计题：六步回答法",
+      "description": "从目标和失败边界开始，落到状态、工具、评测和上线。",
+      "tags": [
+        "系统设计",
+        "面试方法",
+        "架构"
+      ],
+      "path": "interview/system-design.md"
+    },
+    {
+      "id": "project-story",
+      "group": "interview",
+      "title": "项目深挖：把经历讲成证据链",
+      "description": "用目标、取舍、指标和 bad case 代替框架名堆叠。",
+      "tags": [
+        "项目",
+        "STAR",
+        "Bad Case",
+        "简历"
+      ],
+      "path": "interview/project-story.md"
+    },
+    {
+      "id": "fde",
+      "group": "interview",
+      "title": "FDE 面试：技术之外还要证明交付",
+      "description": "需求澄清、现场交付、客户约束、采用率与产品化沉淀。",
+      "tags": [
+        "FDE",
+        "Applied AI",
+        "客户交付"
+      ],
+      "path": "interview/fde.md"
+    },
+    {
+      "id": "question-bank",
+      "group": "interview",
+      "title": "42 题自测：从会说到有证据",
+      "description": "覆盖架构、工具、上下文、RAG、评测、安全与项目的面试清单。",
+      "tags": [
+        "题库",
+        "自测",
+        "Checklist"
+      ],
+      "path": "interview/question-bank.md"
+    },
+    {
+      "id": "evidence-map",
+      "group": "interview",
+      "title": "怎样把真实面经练成自己的回答",
+      "description": "从近期题目组合拆追问链、制作练习卡，用自己的项目回答。",
+      "tags": [
+        "面经",
+        "模拟练习",
+        "轮次",
+        "可信度"
+      ],
+      "path": "interview/evidence-map.md"
+    },
+    {
+      "id": "backend-basics",
+      "group": "interview",
+      "title": "Agent 岗仍会考的后端、网络与算法",
+      "description": "Agent 工程是软件工程加模型非确定性，传统基本功不能跳过。",
+      "tags": [
+        "后端",
+        "数据库",
+        "并发",
+        "算法"
+      ],
+      "path": "interview/backend-basics.md"
+    },
+    {
+      "id": "model-basics",
+      "group": "interview",
+      "title": "模型基础：不同岗位该学到多深",
+      "description": "为应用、Infra 和算法方向划分 Tokenizer、Attention、微调与推理优化的深度。",
+      "tags": [
+        "Transformer",
+        "Embedding",
+        "LoRA",
+        "推理"
+      ],
+      "path": "interview/model-basics.md"
+    },
+    {
+      "id": "failure-matrix",
+      "group": "interview",
+      "title": "故障诊断矩阵：从症状找到下一项实验",
+      "description": "把常见 Agent bad case 映射到 trace、指标与验证动作。",
+      "tags": [
+        "故障诊断",
+        "Trace",
+        "Bad Case",
+        "实验"
+      ],
+      "path": "interview/failure-matrix.md"
+    },
+    {
+      "id": "ai-coding-interview",
+      "group": "interview",
+      "title": "AI Coding 面试：允许使用 AI 时怎么证明能力",
+      "description": "把需求拆解、审计划、验证和归因展示出来，而不是追求生成速度。",
+      "tags": [
+        "AI Coding",
+        "Live Coding",
+        "面试规则"
+      ],
+      "path": "interview/ai-coding-interview.md"
+    },
+    {
+      "id": "source-guide",
+      "group": "interview",
+      "title": "材料怎么选：来源、时效与阅读顺序",
+      "description": "区分官方指南、开源课程、社区面经与聚合题库的用途。",
+      "tags": [
+        "资料",
+        "来源",
+        "可信度",
+        "阅读"
+      ],
+      "path": "interview/source-guide.md"
+    },
+    {"id":"lc-s01-agent-loop","group":"course","title":"从一次回答到持续行动：亲手写 Agent Loop","description":"你问模型“看看这个目录里有哪些文件，再运行测试”。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s01-agent-loop.md"},
+    {"id":"lc-s02-tool-use","group":"course","title":"给 Agent 添工具：定义、处理函数与分发","description":"第一章的模型只有 bash。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s02-tool-use.md"},
+    {"id":"lc-s03-permission","group":"course","title":"工具执行前的权限闸门：硬拒绝、规则与审批","description":"有了文件工具以后，Agent 确实能修改工作区；有了 bash，它还可能提出更广的操作。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s03-permission.md"},
+    {"id":"lc-s04-hooks","group":"course","title":"把扩展点挂在循环上：Hooks 的执行时机与返回值","description":"上一章的 check_permission() 直接写进 Agent Loop。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s04-hooks.md"},
+    {"id":"lc-s05-todo-write","group":"course","title":"让长任务不跑偏：TodoWrite 的状态与提醒","description":"“重构所有 Python 文件、跑测试、修失败”这样的任务很容易在细节里失去主线。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s05-todo-write.md"},
+    {"id":"lc-s06-subagent","group":"course","title":"把一项调查交给子 Agent：隔离消息，不隔离工作区","description":"主 Agent 修 bug 时，也许需要浏览大量文件才能摸清调用链。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s06-subagent.md"},
+    {"id":"lc-s07-skill-loading","group":"course","title":"让 Agent 按需读说明书：Skill 目录与正文加载","description":"一个项目可能同时有代码审查、PDF 处理、API 设计等规范。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s07-skill-loading.md"},
+    {"id":"lc-s08-context-compact","group":"course","title":"长任务如何腾出上下文：四步压缩与可恢复结果","description":"Agent 读文件、运行测试、看日志，每个工具结果都会进入 messages。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s08-context-compact.md"},
+    {"id":"lc-s09-memory","group":"course","title":"跨会话记忆怎样留下来：存储、召回、提取与整理","description":"s08 管理的是当前对话的空间；程序退出后，新的 messages 仍从空白开始。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s09-memory.md"},
+    {"id":"lc-s10-task-system","group":"course","title":"从 Todo 清单走到任务图：依赖、认领与持久化","description":"s05 的 TodoWrite 适合提醒一个 Agent 接下来做什么，但它只保存会话内的一张清单。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s10-task-system.md"},
+    {"id":"lc-s11-background-tasks","group":"course","title":"慢命令放到后台：占位结果、完成通知与清理","description":"一次完整测试可能需要数分钟。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s11-background-tasks.md"},
+    {"id":"lc-s12-cron-scheduler","group":"course","title":"到点再开始：Cron 调度、待交付标记与 Agent 空闲窗口","description":"s11 管的是命令开始后如何不阻塞；s12 管的是任务何时开始。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s12-cron-scheduler.md"},
+    {"id":"lc-s13-agent-teams","group":"course","title":"让多个 Agent 真正协作：任务板、收件箱与工作目录","description":"s06 的子 Agent 是一次性的：执行一项任务，返回最终文本就结束。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s13-agent-teams.md"},
+    {"id":"lc-s14-mcp-tools","group":"course","title":"把外部工具接进同一循环：发现、命名与宿主权限","description":"前面的工具都写在 code.py 中。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s14-mcp-tools.md"},
+    {"id":"lc-s15-integrated-harness","group":"course","title":"把机制接回同一个 Agent Loop：集成 Harness 的事件顺序","description":"前十四章把工具、权限、计划、记忆、后台任务、团队和 MCP 分开讲。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s15-integrated-harness.md"},
+    {"id":"lc-s16-workflow-runtime","group":"course","title":"固定流程交给脚本：Workflow 的编排、结构化结果与续跑","description":"s01–s15 中，模型每一轮观察工具结果，再决定下一步。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s16-workflow-runtime.md"},
+    {"id":"lc-s17-goal-loop","group":"course","title":"模型想停时再查目标：Goal Loop 的独立完成判断","description":"最小 Agent Loop 看到模型不再请求工具就结束。","tags":["逐章课程","Coding Agent"],"path":"coding-course/s17-goal-loop.md"},
+    {"id":"hf-00-course-map","group":"course","title":"如何使用 Hugging Face Agents Course 学习 Agent","description":"这套课程从 Agent 的基本构成讲起，再让你亲手接工具、观察运行轨迹，最后进入框架实践和项目挑战。","tags":["逐章课程","Agent 实作"],"path":"hf-course/00-course-map.md"},
+    {"id":"hf-00-learning-setup","group":"course","title":"开始动手前：账户、推理接口与本地模型","description":"Hugging Face 课程的练习主要借助 Hub、Spaces 和 Notebook：账户用于访问模型、创建 Space，token 用于让代码调用推理服务。","tags":["逐章课程","Agent 实作"],"path":"hf-course/00-learning-setup.md"},
+    {"id":"hf-01-agent-definition","group":"course","title":"AI Agent 到底是什么：从目标、模型到行动","description":"如果一个程序只把问题交给大语言模型，再把文字回答显示出来，它已经有了很实用的语言能力。","tags":["逐章课程","Agent 实作"],"path":"hf-course/01-agent-definition.md"},
+    {"id":"hf-02-llm-for-agents","group":"course","title":"Agent 使用的大语言模型：Token、预测与上下文","description":"Agent 的模型会阅读用户消息、工具描述和执行结果，再决定下一步。","tags":["逐章课程","Agent 实作"],"path":"hf-course/02-llm-for-agents.md"},
+    {"id":"hf-03-messages-and-templates","group":"course","title":"一段对话怎样进入模型：消息、角色与聊天模板","description":"聊天界面让人觉得模型在「记住」之前说过的话。","tags":["逐章课程","Agent 实作"],"path":"hf-course/03-messages-and-templates.md"},
+    {"id":"hf-04-tool-design","group":"course","title":"给 Agent 配工具：描述、参数、执行与返回","description":"工具把模型的决定连接到外部能力。","tags":["逐章课程","Agent 实作"],"path":"hf-course/04-tool-design.md"},
+    {"id":"hf-05-thought-action-observation","group":"course","title":"思考、行动、观察：Agent 怎样完成多步任务","description":"Agent 接到任务后，可以决定先回答还是先调用工具。","tags":["逐章课程","Agent 实作"],"path":"hf-course/05-thought-action-observation.md"},
+    {"id":"hf-06-minimal-agent-from-scratch","group":"course","title":"不依赖框架，手工跑通一个最小 Agent","description":"在使用框架前，值得亲手做一次最小 Agent：把模型输入格式化、让模型提出工具请求、在请求处停止生成、由程序执行工具、将真实结果写回，再让模型完成回答。","tags":["逐章课程","Agent 实作"],"path":"hf-course/06-minimal-agent-from-scratch.md"},
+    {"id":"hf-07-first-smolagents-agent","group":"course","title":"第一个 smolagents Agent：从工具到可分享的 Space","description":"上一课手写了模型请求、动作解析和观察回填。","tags":["逐章课程","Agent 实作"],"path":"hf-course/07-first-smolagents-agent.md"},
+    {"id":"hf-08-framework-choice","group":"course","title":"什么时候需要 Agent 框架：smolagents、LlamaIndex 与 LangGraph","description":"做一个 LLM 应用不一定要从框架开始。","tags":["逐章课程","Agent 实作"],"path":"hf-course/08-framework-choice.md"},
+    {"id":"hf-09-smolagents-code-agent","group":"course","title":"用 CodeAgent 筹备一场派对：搜索、工具、导入与分享","description":"Hugging Face 用管家 Alfred 筹备 Wayne 家派对作为 CodeAgent 实战：先搜索播放列表，再调用自定义工具准备菜单，最后计算准备时间，并将组合后的 Agent 分享到 Hub。","tags":["逐章课程","Agent 实作"],"path":"hf-course/09-smolagents-code-agent.md"},
+    {"id":"hf-10-smolagents-tool-calling","group":"course","title":"ToolCallingAgent：用结构化调用替代代码动作","description":"smolagents 除了 CodeAgent，还提供 ToolCallingAgent。","tags":["逐章课程","Agent 实作"],"path":"hf-course/10-smolagents-tool-calling.md"},
+    {"id":"hf-11-smolagents-tools","group":"course","title":"smolagents 工具实作：函数、Tool 类与外部工具","description":"在 smolagents 中，工具是 Agent 可调用的一项能力。","tags":["逐章课程","Agent 实作"],"path":"hf-course/11-smolagents-tools.md"},
+    {"id":"hf-12-smolagents-retrieval","group":"course","title":"用 smolagents 做检索型 Agent：网页搜索与本地知识库","description":"普通 RAG 常按预先写好的流程处理问题：把用户问题送进检索器，把命中的材料放进提示，再由模型作答。","tags":["逐章课程","Agent 实作"],"path":"hf-course/12-smolagents-retrieval.md"},
+    {"id":"hf-13-smolagents-vision","group":"course","title":"让 Agent 看图：在任务开始时提供图像","description":"网页截图、图表和文档扫描件不能只靠纯文本模型理解。","tags":["逐章课程","Agent 实作"],"path":"hf-course/13-smolagents-vision.md"},
+    {"id":"hf-14-visual-browser-agent","group":"course","title":"视觉浏览 Agent：在每一步接收网页截图","description":"上一课把图片随任务一起提供。","tags":["逐章课程","Agent 实作"],"path":"hf-course/14-visual-browser-agent.md"},
+    {"id":"hf-15-smolagents-multi-agent","group":"course","title":"多 Agent 分工实作：搜索拍摄地、计算航程并画地图","description":"单个 Agent 可以搜索网页、算距离、整理表格和画地图，但它每一步都要带着越来越长的搜索历史。","tags":["逐章课程","Agent 实作"],"path":"hf-course/15-smolagents-multi-agent.md"},
+    {"id":"hf-16-unit1-exercises","group":"course","title":"Unit 1 自测：用 11 道题检验 Agent 基础","description":"概念课读懂后，先不看下方解析，自己回答这 11 道题。","tags":["逐章课程","Agent 实作"],"path":"hf-course/16-unit1-exercises.md"},
+    {"id":"hf-17-langgraph-foundations","group":"course","title":"LangGraph 基础：用 State、Node 和 Edge 控制执行路径","description":"当任务有明确步骤和分支，例如「收到邮件后分类，垃圾邮件丢弃，重要邮件起草回复」，用图表达流程比让模型随意决定所有步骤更容易检查。","tags":["逐章课程","Agent 实作"],"path":"hf-course/17-langgraph-foundations.md"},
+    {"id":"hf-18-langgraph-email","group":"course","title":"第一个 LangGraph：分类邮件并起草回复","description":"这节课用邮件分拣练习完整走一遍 LangGraph：接收邮件、调用模型分类、按结果走不同分支；垃圾邮件结束，正常邮件起草回复，再把草稿显示给 Wayne 先生审核。","tags":["逐章课程","Agent 实作"],"path":"hf-course/18-langgraph-email.md"},
+    {"id":"hf-19-langgraph-document-agent","group":"course","title":"LangGraph 文档 Agent：让模型在视觉提取与计算工具间选择","description":"邮件分拣图的路径由程序明确规定。","tags":["逐章课程","Agent 实作"],"path":"hf-course/19-langgraph-document-agent.md"},
+    {"id":"hf-20-llamaindex-orientation","group":"course","title":"LlamaIndex 从哪里开始：组件、集成与 LlamaHub","description":"LlamaIndex 擅长把你的资料接入模型应用：加载文件或服务数据，拆分并索引，查询相关内容，再把检索能力交给 Agent 或工作流。","tags":["逐章课程","Agent 实作"],"path":"hf-course/20-llamaindex-orientation.md"},
+    {"id":"hf-21-llamaindex-rag-pipeline","group":"course","title":"LlamaIndex RAG 管道：加载、切分、索引、查询与评估","description":"当模型没有你们的菜单、日历或业务文档时，RAG 的办法是先从资料里找相关片段，再把片段交给模型回答。","tags":["逐章课程","Agent 实作"],"path":"hf-course/21-llamaindex-rag-pipeline.md"},
+    {"id":"hf-22-llamaindex-tools","group":"course","title":"LlamaIndex 的四类工具：函数、查询引擎、ToolSpec 与按需加载","description":"LlamaIndex 的工具层把普通 Python 函数、RAG 查询引擎或外部服务封装成 Agent 可理解的接口。","tags":["逐章课程","Agent 实作"],"path":"hf-course/22-llamaindex-tools.md"},
+    {"id":"hf-23-llamaindex-agents","group":"course","title":"LlamaIndex AgentWorkflow：函数调用、ReAct、记忆与交接","description":"有了工具后，Agent 才有东西可选。","tags":["逐章课程","Agent 实作"],"path":"hf-course/23-llamaindex-agents.md"},
+    {"id":"hf-24-llamaindex-workflows","group":"course","title":"LlamaIndex Workflow：事件、循环、共享状态与多 Agent","description":"LlamaIndex Workflow 把程序写成由事件驱动的步骤：一个步骤接收某类 Event，完成后返回另一类 Event，触发下一个步骤。","tags":["逐章课程","Agent 实作"],"path":"hf-course/24-llamaindex-workflows.md"},
+    {"id":"hf-25-unit2-framework-exercises","group":"course","title":"Unit 2 框架自测：smolagents、LlamaIndex 与 LangGraph","description":"Hugging Face Unit 2 在每条框架实践线里都安排了不计分小测。","tags":["逐章课程","Agent 实作"],"path":"hf-course/25-unit2-framework-exercises.md"},
+    {"id":"hf-26-gala-guest-retrieval","group":"course","title":"Gala 案例（一）：把宾客资料做成可查询工具","description":"Alfred 主持晚会时，需要知道谁是受邀宾客、与主办方的关系以及适合交流的话题。","tags":["逐章课程","Agent 实作"],"path":"hf-course/26-gala-guest-retrieval.md"},
+    {"id":"hf-27-gala-external-tools","group":"course","title":"Gala 案例（二）：搜索、模拟天气与 Hub 统计工具","description":"宾客名单回答的是晚会内部问题。","tags":["逐章课程","Agent 实作"],"path":"hf-course/27-gala-external-tools.md"},
+    {"id":"hf-28-gala-agent-integration","group":"course","title":"Gala 案例（三）：把检索与工具组装成 Agent","description":"宾客检索、网页搜索、模拟天气和 Hub 统计已经能单独工作。","tags":["逐章课程","Agent 实作"],"path":"hf-course/28-gala-agent-integration.md"},
+    {"id":"hf-29-gaia-benchmark","group":"course","title":"用 GAIA 检验 Agent：不要只看它会不会聊天","description":"一个 Agent 在演示中回答得很像样，不代表它能完成真实任务。","tags":["逐章课程","Agent 实作"],"path":"hf-course/29-gaia-benchmark.md"},
+    {"id":"hf-30-gaia-final-project","group":"course","title":"GAIA 实战：搭建、提交并复盘一个可评估的 Agent","description":"前一篇弄清了 GAIA 测什么，这一篇把它落到一个练习项目：领取题目与附件，让 Agent 独立作答，按指定接口提交，再通过失败样本改进。","tags":["逐章课程","Agent 实作"],"path":"hf-course/30-gaia-final-project.md"},
+    {"id":"ms-00-setup","group":"course","title":"把 Microsoft AI Agents 课程跑起来","description":"这门课程的练习主要是 Jupyter Notebook：先让一个最小 Agent 回答问题，再逐步接入工具、检索、规划和多 Agent。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-00-setup.md"},
+    {"id":"ms-01-agent-basics","group":"course","title":"认识 AI Agent：什么时候该让模型自己决定下一步","description":"想象你对旅行助手说：“帮一家四口安排三天墨尔本行程，预算有限，孩子不想每天换酒店。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-01-agent-basics.md"},
+    {"id":"ms-02-frameworks","group":"course","title":"Agent 框架与托管服务：把原型搭好，再知道谁负责运行","description":"做第一个 Agent 时，自己写一个调用模型、解析工具请求、执行函数、再调用模型的循环就能理解原理。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-02-frameworks.md"},
+    {"id":"ms-03-design-principles","group":"course","title":"设计一个愿意让人长期使用的 Agent","description":"Agent 会主动查找、提醒甚至替用户行动。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-03-design-principles.md"},
+    {"id":"ms-04-tool-pattern","group":"course","title":"工具调用的完整一轮：从模型建议到程序执行","description":"工具让 Agent 可以拿到实时信息，也可以改变外部系统。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-04-tool-pattern.md"},
+    {"id":"ms-05-agentic-rag","group":"course","title":"Agentic RAG：让检索能够改问题、补证据、知难而停","description":"普通 RAG 常把问题交给检索器，取回一批片段，再让模型基于这些片段回答。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-05-agentic-rag.md"},
+    {"id":"ms-06-trustworthy","group":"course","title":"可信赖的 Agent：提示词、权限、人工批准各管哪一段","description":"一个旅行 Agent 可以查航班，也可能取消订单和通知乘客。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-06-trustworthy.md"},
+    {"id":"ms-07-planning","group":"course","title":"规划与重规划：让复杂任务有可执行的中间结果","description":"“安排一家四口从新加坡去墨尔本的旅行”听起来是一个请求，实际包含日期、预算、机票、酒店、租车、活动和儿童需求。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-07-planning.md"},
+    {"id":"ms-08-multi-agent","group":"course","title":"多 Agent 协作：什么时候分工，交接时交什么","description":"一个旅行助手能同时查机票、酒店和租车，并不自动需要三个 Agent。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-08-multi-agent.md"},
+    {"id":"ms-09a-metacognition","group":"course","title":"Agent 如何检查自己的方法：反思、反馈与计划调整","description":"旅行助手第一次推荐了最便宜的酒店。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-09a-metacognition.md"},
+    {"id":"ms-09b-corrective-rag","group":"course","title":"纠正性 RAG：从用户反馈到检索、重排与意图判断","description":"旅行助手推荐了埃菲尔铁塔，用户说“不想去人挤人的地方”。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-09b-corrective-rag.md"},
+    {"id":"ms-09c-code-and-sql","group":"course","title":"把代码与 SQL 当作工具：能力很强，执行边界更要清楚","description":"当 Agent 需要从大量表格中筛选结果、做统计并画图，模型生成短程序可能比预先定义几十个函数灵活。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-09c-code-and-sql.md"},
+    {"id":"ms-10-observability-evaluation","group":"course","title":"生产中的 Agent：用轨迹、评测和成本数据改进它","description":"Agent 在演示时答对几道题，进入生产后却可能因为新用户问法、工具限流或知识库更新而失败。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-10-observability-evaluation.md"},
+    {"id":"ms-11-protocols","group":"course","title":"MCP、A2A、NLWeb：工具、代理与网站分别怎样接入","description":"旅行助手若要查航班，可以连接提供工具的 MCP server；若要把酒店研究交给另一家公司维护的独立 Agent，可以使用 A2A；若旅行网站希望人和外部 Agent 都能自然语言查询站内目录，NLWeb 提供一条实现路径。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-11-protocols.md"},
+    {"id":"ms-12-context-engineering","group":"course","title":"上下文工程：让 Agent 下一步只看到真正需要的信息","description":"Agent 处理的任务越长，能看的东西越多：系统指令、用户对话、工具说明、检索片段、运行笔记和过去偏好都会进入模型输入。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-12-context-engineering.md"},
+    {"id":"ms-13-memory","group":"course","title":"Agent 记忆：让它记得该记的，也能忘掉不该留的","description":"用户前一轮问巴黎机票，下一轮说“那住宿呢？","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-13-memory.md"},
+    {"id":"ms-14a-framework","group":"course","title":"Microsoft Agent Framework：Agent、工具、线程与中间件","description":"Microsoft Agent Framework（MAF）把模型客户端、Agent 指令、工具和运行状态组织在一起。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-14a-framework.md"},
+    {"id":"ms-14b-workflows-hosting","group":"course","title":"MAF 工作流与 LangGraph 托管：把步骤、状态和部署连起来","description":"Agent 能选择工具，但有些流程必须明确顺序、并发和交接。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-14b-workflows-hosting.md"},
+    {"id":"ms-15-browser-use","group":"course","title":"浏览器 Agent：让开放式导航与确定性操作各做擅长的事","description":"有些网页没有可用 API，页面布局还会随着弹窗、登录状态或实验版本变化。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-15-browser-use.md"},
+    {"id":"ms-16a-deployment","group":"course","title":"从 Notebook 到生产服务：部署、扩展与治理 Agent","description":"本地 Notebook 里由开发者 az login，手工看每次模型回复，任务失败就重跑。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-16a-deployment.md"},
+    {"id":"ms-16b-support-lab","group":"course","title":"实战：把客户支持 Agent 接成可发布的服务","description":"第 16 课的 Contoso 客户支持练习把工具、知识库、记忆、路由、缓存、审批、评测和追踪放进同一个服务。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-16b-support-lab.md"},
+    {"id":"ms-17-local-agents","group":"course","title":"本地 Agent：用小模型、文件工具和本地检索完成工程任务","description":"并非每次 Agent 任务都要把代码和文档发到云端。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-17-local-agents.md"},
+    {"id":"ms-18a-signed-receipts","group":"course","title":"给 Agent 动作签收据：离线验证工具调用有没有被改写","description":"一次旅行 Agent 预订争议发生后，日志显示它查了航班、申请了座位、调用了预订接口。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-18a-signed-receipts.md"},
+    {"id":"ms-18b-approval-receipts","group":"course","title":"证明“批准的就是执行的”：审批收据与生产审计","description":"一张 Agent 工具收据能证明某密钥签过一次 issue_refund 记录，却不能证明客户或审批人同意了这笔退款。","tags":["逐章课程","Agent 工程"],"path":"ms-course/ms-18b-approval-receipts.md"},
+    {"id":"backend-transition-plan","group":"start","title":"后端转 AI 应用开发：八周做出能交付的作品","description":"复用后端优势，在八周内完成模型接口、RAG、受限 Agent、记忆、评测和生产交付。","tags":["学习路线","后端转 AI","实作"],"path":"start/backend-transition-plan.md"},
+    {"id":"case-tiktok-2026-08-09","group":"interview","title":"一场从会议转写问到 Agent 架构的面试","description":"沿音视频、ASR、隐私、RAG、长上下文、多 Agent 和算法题练连续追问。","tags":["真实面经","多模态","RAG"],"path":"interview/case-tiktok-2026-08-09.md"},
+    {"id":"case-bytedance-2026-08-12","group":"interview","title":"字节 Agent 开发一面：AI 能力与后端基本功一起考","description":"从 RAG 和 AI Coding 延伸到通信协议、索引、热点榜单与线程安全。","tags":["真实面经","后端","AI Coding"],"path":"interview/case-bytedance-2026-08-12.md"},
+    {"id":"case-baidu-coding-agent-three-rounds","group":"interview","title":"Coding Agent 三轮：从 Agent 设计走到操作系统","description":"逐轮练 ReAct、Skill、权限隔离、网络、并发、虚拟内存和算法。","tags":["真实面经","Coding Agent","操作系统"],"path":"interview/case-baidu-coding-agent-three-rounds.md"},
+    {"id":"case-baidu-meg-2026-08-18","group":"interview","title":"从 Context 追到 Harness 的 Agent 面试","description":"用一场 80 分钟的一面练 AI 提效、上下文压缩、团队 RAG 与工程基础。","tags":["真实面经","Context","Harness"],"path":"interview/case-baidu-meg-2026-08-18.md"},
+    {"id":"case-harvey-document-agent-2026-08","group":"interview","title":"文档评估 Agent：规则、协作与最小 RAG","description":"用一场现场面试练文档评级、冲突处理、检索评测和项目取舍。","tags":["英文面经","文档 Agent","RAG"],"path":"interview/case-harvey-document-agent-2026-08.md"},
+    {"id":"case-insta360-agent-2026-08-09","group":"interview","title":"影石 Agent 一面：从 Harness 到后端基础","description":"逐题练 Agent 架构、工具超时、恢复、记忆、Java 与 MySQL。","tags":["真实面经","Harness","后端"],"path":"interview/case-insta360-agent-2026-08-09.md"},
+    {"id":"case-xiaohongshu-agent-2026-08-09","group":"interview","title":"小红书 Agent 一面：项目与多 Agent","description":"从使用 Agent 的理由，追到并发、Planner/Executor/Critic 与广告优化。","tags":["真实面经","多 Agent","项目"],"path":"interview/case-xiaohongshu-agent-2026-08-09.md"},
+    {"id":"case-xiaohongshu-agent-2026-08-12","group":"interview","title":"小红书 Agent 一面：同一项目的连续追问","description":"围绕 Harness、记忆、并发、Redis 与个人贡献准备有深度的回答。","tags":["真实面经","Harness","记忆"],"path":"interview/case-xiaohongshu-agent-2026-08-12.md"},
+    {"id":"case-meituan-agent-2026-08-23","group":"interview","title":"美团 Agent 一面：RAG 与协作状态","description":"逐题练切分、状态汇总、路由、压缩、异步调度和 AI Coding。","tags":["真实面经","RAG","多 Agent"],"path":"interview/case-meituan-agent-2026-08-23.md"},
+    {"id":"case-yaowu-ai-app-2026-09-07","group":"interview","title":"要务科技 AI 应用一面：业务可靠性","description":"从 Webhook、幂等、消息、大文件与 PDF，到注入防护和编码工作流。","tags":["真实面经","业务集成","安全"],"path":"interview/case-yaowu-ai-app-2026-09-07.md"},
+    {"id":"case-scale-2026-07","group":"interview","title":"后端与 AI 交叉面试：调度与现场实作","description":"用调度器、Embedding API、CSV 处理及 AI 辅助编码练系统设计与验证。","tags":["英文面经","后端","AI Coding"],"path":"interview/case-scale-2026-07.md"},
+    {"id":"case-baidu-agent-2026-09-07","group":"interview","title":"百度 Agent 实习：项目细节与中断恢复","description":"沿 15 个项目追问练混合检索、工具兜底、MCP、恢复、Trace 与树题。","tags":["真实面经","RAG","恢复"],"path":"interview/case-baidu-agent-2026-09-07.md"},
+    {"id":"case-xiaohongshu-ondevice-2026-09-14","group":"interview","title":"小红书端侧推理：工具、RAG 与训练实验","description":"练端侧工具、医疗 RAG、低资源翻译、SFT/LoRA 与岗位动机。","tags":["真实面经","端侧","模型"],"path":"interview/case-xiaohongshu-ondevice-2026-09-14.md"},
+    {"id":"case-bytedance-agent-2026-09-15","group":"interview","title":"字节 Agent 一面：RAG 诊断与后端基础","description":"按 19 个环节练召回、MySQL、Go/Java、线程池、DFS 和 AI Coding。","tags":["真实面经","RAG","后端"],"path":"interview/case-bytedance-agent-2026-09-15.md"},
+    {"id":"case-bytedance-agent-2026-09-16","group":"interview","title":"字节 Agent 一面：记忆、幂等与 Harness","description":"从窗口摘要和更新幂等，追到 Computer Use、数据库与算法。","tags":["真实面经","Harness","记忆"],"path":"interview/case-bytedance-agent-2026-09-16.md"},
+    {"id":"case-meituan-agent-2026-09-16","group":"interview","title":"美团 Agent 一面：长流程与交易异常测试","description":"沿 30 题讲任务可靠性、幻觉、知识保鲜、交易稳定和测试。","tags":["真实面经","长任务","测试"],"path":"interview/case-meituan-agent-2026-09-16.md"},
+    {"id":"project-ladder","group":"start","title":"11 级项目阶梯：从工具调用到生产 Harness","description":"按能力依赖做 11 个可运行项目，每一级都给验收与故障样本。","tags":["项目","学习路径","实践"],"path":"start/project-ladder.md"},
+    {"id":"project-reading-guide","group":"start","title":"按问题选读 Agent 开源项目","description":"从基础课程、Coding Harness、消息 Gateway 到浏览器与 ACP，按工程问题选项目并设计验证练习。","tags":["开源项目","选读","实践"],"path":"start/project-reading-guide.md"},
+    {"id":"architecture-layers","group":"course","title":"一次 Agent 请求穿过哪些层","description":"沿九层技术栈追踪输入、推理、工具、状态、安全和观测。","tags":["Agent 基础","架构"],"path":"aigc-foundations/architecture-layers.md"},
+    {"id":"framework-ecosystem","group":"course","title":"Agent 框架怎么选","description":"比较 CrewAI、AutoGen、Google ADK、LlamaIndex 与图式运行时。","tags":["框架","选型"],"path":"aigc-foundations/framework-ecosystem.md"},
+    {"id":"openai-agents-sdk","group":"course","title":"OpenAI Agents SDK 的受控执行","description":"用少量原语搭建工具、交接、Guardrail 与 Trace。","tags":["Agents SDK","框架"],"path":"aigc-foundations/openai-agents-sdk.md"},
+    {"id":"langgraph-stateful-workflow","group":"course","title":"LangGraph 的状态与恢复","description":"用状态图、检查点和人工接手管理长任务。","tags":["LangGraph","工作流"],"path":"aigc-foundations/langgraph-stateful-workflow.md"},
+    {"id":"pattern-01-choice","group":"course","title":"Agent 设计模式：先看任务，再定自由度","description":"用确定性、风险与成本判断普通调用、工作流、Agent 的边界。","tags":["设计模式","选型"],"path":"aigc-engineering/pattern-01-choice.md"},
+    {"id":"pattern-02-react","group":"course","title":"ReAct：用环境反馈校正下一步","description":"理解观察、行动、工具执行、停止与错误恢复的循环。","tags":["ReAct","Agent loop"],"path":"aigc-engineering/pattern-02-react.md"},
+    {"id":"pattern-03-plan-reflection","group":"course","title":"规划、执行与反思","description":"让长任务分步可检查，并在新证据出现时调整计划。","tags":["规划","反思"],"path":"aigc-engineering/pattern-03-plan-reflection.md"},
+    {"id":"pattern-04-search","group":"course","title":"多路径搜索：ToT、GoT 与 LATS","description":"比较树、图与搜索式推理的适用条件和额外成本。","tags":["搜索","推理"],"path":"aigc-engineering/pattern-04-search.md"},
+    {"id":"pattern-05-multiagent-workflow","group":"course","title":"多 Agent 编排与可恢复工作流","description":"明确协作契约、状态交接、检查点与失败恢复。","tags":["多 Agent","工作流"],"path":"aigc-engineering/pattern-05-multiagent-workflow.md"},
+    {"id":"coding-01-architecture","group":"course","title":"编码 Agent 的工程架构","description":"从补全代码走向检索、修改、测试与交付的完整任务。","tags":["Coding Agent","架构"],"path":"aigc-engineering/coding-01-architecture.md"},
+    {"id":"coding-02-tools-permissions","group":"course","title":"编码 Agent 的工具与权限","description":"把命令、文件、网络和危险操作放进可控边界。","tags":["Coding Agent","权限"],"path":"aigc-engineering/coding-02-tools-permissions.md"},
+    {"id":"coding-03-repository-context","group":"course","title":"编码 Agent 怎样读懂仓库","description":"用定位、检索、上下文预算与验证避免盲目改代码。","tags":["Coding Agent","上下文"],"path":"aigc-engineering/coding-03-repository-context.md"},
+    {"id":"coding-04-collaboration-skills","group":"course","title":"子 Agent、Skills 与 Hooks","description":"判断何时拆任务、复用流程，以及如何约束自动化。","tags":["Skills","协作"],"path":"aigc-engineering/coding-04-collaboration-skills.md"},
+    {"id":"coding-05-client-remote","group":"course","title":"CLI、IDE 与远程会话","description":"理解不同入口如何共享同一任务状态与执行边界。","tags":["Coding Agent","客户端"],"path":"aigc-engineering/coding-05-client-remote.md"},
+    {"id":"coding-06-evaluation","group":"course","title":"怎样评估编码 Agent","description":"除了修复成功，还要检查轨迹、测试、成本与风险。","tags":["Coding Agent","评测"],"path":"aigc-engineering/coding-06-evaluation.md"},
+    {"id":"coding-07-agentos-routing","group":"course","title":"AgentOS：入口、Gateway 与会话","description":"为多渠道 Agent 设计路由、状态与能力层次。","tags":["AgentOS","架构"],"path":"aigc-engineering/coding-07-agentos-routing.md"},
+    {"id":"coding-08-runtime-lifecycle","group":"course","title":"AgentOS 的安全与长任务生命周期","description":"处理会话恢复、资源上限、持久状态与权限。","tags":["AgentOS","可靠性"],"path":"aigc-engineering/coding-08-runtime-lifecycle.md"},
+    {"id":"protocol-01-landscape","group":"course","title":"Function Calling、MCP 与 A2A","description":"分清结构化工具请求、工具连接与独立 Agent 协作。","tags":["协议","选型"],"path":"aigc-engineering/protocol-01-landscape.md"},
+    {"id":"protocol-02-function-calling","group":"course","title":"Function Calling 完整闭环","description":"从模型提议到宿主校验、执行、回填与错误恢复。","tags":["工具调用","协议"],"path":"aigc-engineering/protocol-02-function-calling.md"},
+    {"id":"protocol-03-mcp-core","group":"course","title":"MCP 架构与 2026 版变化","description":"读懂能力发现、传输、授权和协议版本边界。","tags":["MCP","协议"],"path":"aigc-engineering/protocol-03-mcp-core.md"},
+    {"id":"protocol-04-mcp-server-security","group":"course","title":"可上线的 MCP Server","description":"按工具粒度、权限和不可信输出设计服务。","tags":["MCP","安全"],"path":"aigc-engineering/protocol-04-mcp-server-security.md"},
+    {"id":"protocol-05-a2a-core","group":"course","title":"A2A：独立 Agent 怎样协作","description":"用任务、消息与产物契约完成远程协作。","tags":["A2A","协议"],"path":"aigc-engineering/protocol-05-a2a-core.md"},
+    {"id":"protocol-06-enterprise-platform","group":"course","title":"企业 Agent 协议平台","description":"把工具、远程 Agent、网关、安全与审计接起来。","tags":["平台","治理"],"path":"aigc-engineering/protocol-06-enterprise-platform.md"},
+    {"id":"harness-01-foundations","group":"course","title":"Agent Harness：一次可比较的执行","description":"把任务、环境、运行与评测组成可复现实验。","tags":["Harness","评测"],"path":"aigc-architecture/harness-01-foundations.md"},
+    {"id":"harness-02-task-environment-runner","group":"course","title":"任务、环境与 Runner","description":"拆解输入契约、执行环境、预算与结果收集。","tags":["Harness","Runner"],"path":"aigc-architecture/harness-02-task-environment-runner.md"},
+    {"id":"harness-03-trace-grading","group":"course","title":"Trace 与 Grader","description":"用轨迹证据和多层评分判断 Agent 怎样成功或失败。","tags":["Trace","评测"],"path":"aigc-architecture/harness-03-trace-grading.md"},
+    {"id":"harness-04-scenarios","group":"course","title":"四种场景，四套 Harness","description":"根据任务与环境差异设计不同的执行和验证边界。","tags":["Harness","场景"],"path":"aigc-architecture/harness-04-scenarios.md"},
+    {"id":"harness-05-release-gates","group":"course","title":"CI、Shadow Mode 与失败回流","description":"把评测、影子运行与回归门槛接进发布流程。","tags":["CI","发布"],"path":"aigc-architecture/harness-05-release-gates.md"},
+    {"id":"harness-06-enterprise-platform","group":"course","title":"企业级 Harness 平台","description":"集中管理任务集、运行、评测、权限和成本。","tags":["Harness","平台"],"path":"aigc-architecture/harness-06-enterprise-platform.md"},
+    {"id":"evolution-01-learning-loop","group":"course","title":"自进化 Agent 的经验闭环","description":"从任务轨迹中提炼可验证的策略，而非无约束自改。","tags":["自进化","反馈"],"path":"aigc-architecture/evolution-01-learning-loop.md"},
+    {"id":"evolution-02-multiplatform-runtime","group":"course","title":"多平台 Gateway 与长期任务","description":"连接消息入口、会话状态、调度和恢复。","tags":["Gateway","长任务"],"path":"aigc-architecture/evolution-02-multiplatform-runtime.md"},
+    {"id":"evolution-03-registries-plugins","group":"course","title":"模型、工具、Skill 与插件","description":"用注册、版本和权限契约组织可扩展能力。","tags":["Skill","插件"],"path":"aigc-architecture/evolution-03-registries-plugins.md"},
+    {"id":"evolution-04-curator","group":"course","title":"Curator 与知识资产维护","description":"整理和验证可重用经验，避免记忆污染与过期。","tags":["记忆","治理"],"path":"aigc-architecture/evolution-04-curator.md"},
+    {"id":"evolution-05-safety-checkpoint","group":"course","title":"安全边界与 Checkpoint","description":"保护长任务执行、持久状态、审批与恢复点。","tags":["安全","Checkpoint"],"path":"aigc-architecture/evolution-05-safety-checkpoint.md"},
+    {"id":"evolution-06-trajectory-rl-platform","group":"course","title":"轨迹、强化学习与系统设计","description":"辨别轨迹数据价值、训练边界与平台层设计。","tags":["轨迹","系统设计"],"path":"aigc-architecture/evolution-06-trajectory-rl-platform.md"},
+    {"id":"memory-01-context","group":"course","title":"记忆与上下文工程","description":"理解任务状态、提示词、窗口与长期记忆各自的职责。","tags":["记忆","Context"],"path":"aigc-advanced/memory-01-context.md"},
+    {"id":"memory-02-types-rag","group":"course","title":"记忆类型与 RAG","description":"区分工作、事件、语义和过程记忆，以及它们怎样与检索配合。","tags":["记忆","RAG"],"path":"aigc-advanced/memory-02-types-rag.md"},
+    {"id":"memory-03-lifecycle","group":"course","title":"记忆的写入、检索与遗忘","description":"把抽取、去重、冲突处理、更新和删除接成完整生命周期。","tags":["记忆","生命周期"],"path":"aigc-advanced/memory-03-lifecycle.md"},
+    {"id":"memory-04-context-window","group":"course","title":"上下文窗口治理","description":"在长任务中压缩历史而不丢目标、约束和关键状态。","tags":["Context","压缩"],"path":"aigc-advanced/memory-04-context-window.md"},
+    {"id":"memory-05-storage-security","group":"course","title":"长期记忆的存储与隐私","description":"比较存储结构、跨 Agent 共享和多租户隔离。","tags":["记忆","安全"],"path":"aigc-advanced/memory-05-storage-security.md"},
+    {"id":"memory-06-skills-project","group":"course","title":"Skill 与项目记忆","description":"按需加载流程知识，并让项目约定可版本化、可检查。","tags":["Skill","项目记忆"],"path":"aigc-advanced/memory-06-skills-project.md"},
+    {"id":"ops-01-risk","group":"course","title":"行动风险与 AgentOps","description":"解释为何评测 Agent 的行动过程，而不只看最终回答。","tags":["AgentOps","安全"],"path":"aigc-advanced/ops-01-risk.md"},
+    {"id":"ops-02-guardrails","group":"course","title":"四层 Guardrails","description":"在输入、工具、状态和输出各层设置可验证的防线。","tags":["Guardrails","安全"],"path":"aigc-advanced/ops-02-guardrails.md"},
+    {"id":"ops-03-evaluation","group":"course","title":"指标、公开基准与企业任务集","description":"区分任务成功、轨迹、成本与安全的评测办法。","tags":["评测","基准"],"path":"aigc-advanced/ops-03-evaluation.md"},
+    {"id":"ops-04-tracing","group":"course","title":"Trace 与失败回流","description":"把模型决策、工具结果和状态变化串起来定位故障。","tags":["Trace","AgentOps"],"path":"aigc-advanced/ops-04-tracing.md"},
+    {"id":"ops-05-release","group":"course","title":"分阶段上线与回滚","description":"从只读和影子运行逐步放开写操作，配合门槛与回滚。","tags":["发布","治理"],"path":"aigc-advanced/ops-05-release.md"},
+    {"id":"ops-06-scenarios","group":"course","title":"三类 Agent 的安全评测","description":"比较编码、浏览器与客服场景各自的风险和测试。","tags":["安全","场景"],"path":"aigc-advanced/ops-06-scenarios.md"},
+    {"id":"platform-01-control-plane","group":"course","title":"企业 Agent 平台控制平面","description":"明确能力管理、运行与治理之间的职责边界。","tags":["企业平台","架构"],"path":"aigc-advanced/platform-01-control-plane.md"},
+    {"id":"platform-02-core-modules","group":"course","title":"Builder、Registry 与模型网关","description":"让开发入口、能力注册和模型路由协同工作。","tags":["企业平台","网关"],"path":"aigc-advanced/platform-02-core-modules.md"},
+    {"id":"platform-03-multitenancy","group":"course","title":"多租户与 Marketplace 治理","description":"控制共享能力的权限、版本、审计与数据边界。","tags":["多租户","治理"],"path":"aigc-advanced/platform-03-multitenancy.md"},
+    {"id":"platform-04-product","group":"course","title":"从 PoC 到生产","description":"选择能被验证的场景，安排人工审核和业务验收。","tags":["产品","交付"],"path":"aigc-advanced/platform-04-product.md"},
+    {"id":"platform-05-operations","group":"course","title":"成本、发布、审计与长任务","description":"让企业平台持续可控，而不是停在一次演示。","tags":["运维","成本"],"path":"aigc-advanced/platform-05-operations.md"},
+    {"id":"platform-06-selection","group":"course","title":"框架与平台选型","description":"按任务、企业边界和团队能力选择构建方式。","tags":["选型","平台"],"path":"aigc-advanced/platform-06-selection.md"},
+    {"id":"hf-31-function-calling-protocol","group":"course","title":"函数调用：让模型提出动作，让程序执行动作","description":"理解结构化调用请求、宿主校验、真实执行和工具结果回填。","tags":["逐章课程","Function Calling"],"path":"hf-course/31-function-calling-protocol.md"},
+    {"id":"hf-32-function-calling-finetune","group":"course","title":"用 LoRA 微调函数调用模型：从数据到验收","description":"在排除接口和 Schema 问题后，再评估微调数据、训练与回归验收。","tags":["逐章课程","LoRA"],"path":"hf-course/32-function-calling-finetune.md"},
+    {"id":"hf-38-function-calling-finetune-notebook","group":"course","title":"Function Calling 微调实操：从数据到适配器","description":"逐步理解 Notebook 的数据模板、特殊 token、LoRA/SFT、保存重载与评测。","tags":["逐章课程","微调","Notebook"],"path":"hf-course/38-function-calling-finetune-notebook.md"},
+    {"id":"hf-33-agent-observability","group":"course","title":"Agent 可观测性：看见每一步，才知道哪里出了错","description":"用日志、指标和追踪定位模型、工具、成本与安全问题。","tags":["逐章课程","Observability"],"path":"hf-course/33-agent-observability.md"},
+    {"id":"hf-34-agent-telemetry-workshop","group":"course","title":"实作 Agent 追踪：从第一条 Span 到数据集回归","description":"接入 OpenTelemetry 与 Langfuse，关联反馈和离线评测。","tags":["逐章课程","Trace"],"path":"hf-course/34-agent-telemetry-workshop.md"},
+    {"id":"hf-35-game-agents","group":"course","title":"游戏里的 Agent：会聊天的 NPC 与会行动的 NPC","description":"区分被动对话与可观察的状态、决策和动作循环。","tags":["逐章课程","Game Agent"],"path":"hf-course/35-game-agents.md"},
+    {"id":"hf-36-pokemon-battle-agent","group":"course","title":"造一个回合制对战 Agent：状态、工具调用与合法动作","description":"让模型在 Pokémon Showdown 的合法动作中决策，并由环境执行校验。","tags":["逐章课程","Game Agent"],"path":"hf-course/36-pokemon-battle-agent.md"},
+    {"id":"hf-37-pokemon-battle-launch","group":"course","title":"把对战 Agent 放进竞技场，并用对战记录改进它","description":"从本地合法性测试走向联机部署、多场评估与轨迹复盘。","tags":["逐章课程","Game Agent"],"path":"hf-course/37-pokemon-battle-launch.md"}
+  ],
+  "plan": [
+    {
+      "day": 1,
+      "title": "边界地图",
+      "task": "用三个真实任务区分 Agent、Workflow 与 Copilot",
+      "phase": "公共基础",
+      "article": "agent-map"
+    },
+    {
+      "day": 2,
+      "title": "最小循环",
+      "task": "不用框架实现 model → tool → observation",
+      "phase": "公共基础",
+      "article": "lc-s01-agent-loop"
+    },
+    {
+      "day": 3,
+      "title": "完成条件",
+      "task": "加入成功证据、失败、步数与费用上限",
+      "phase": "公共基础",
+      "article": "lc-s17-goal-loop"
+    },
+    {
+      "day": 4,
+      "title": "角色与选题",
+      "task": "选应用、Infra、Coding 或 FDE，并收窄项目",
+      "phase": "公共基础",
+      "article": "role-map"
+    },
+    {
+      "day": 5,
+      "title": "种子 Eval",
+      "task": "为项目写 5 个正常、边界和失败样本",
+      "phase": "公共基础",
+      "article": "eval-observability"
+    },
+    {
+      "day": 6,
+      "title": "文件与命令",
+      "task": "完成 search、read、patch、command 工具闭环",
+      "phase": "Harness Kernel",
+      "article": "lc-s02-tool-use"
+    },
+    {
+      "day": 7,
+      "title": "Schema 与错误",
+      "task": "制造参数错误、超时和部分成功",
+      "phase": "Harness Kernel",
+      "article": "ms-04-tool-pattern"
+    },
+    {
+      "day": 8,
+      "title": "权限闸门",
+      "task": "实现硬拒绝、宿主规则与用户确认",
+      "phase": "Harness Kernel",
+      "article": "lc-s03-permission"
+    },
+    {
+      "day": 9,
+      "title": "Hooks",
+      "task": "在工具前后做权限、校验、trace 与状态更新",
+      "phase": "Harness Kernel",
+      "article": "lc-s04-hooks"
+    },
+    {
+      "day": 10,
+      "title": "Goal Gate",
+      "task": "没有测试或确定性证据时拒绝宣称完成",
+      "phase": "Harness Kernel",
+      "article": "lc-s17-goal-loop"
+    },
+    {
+      "day": 11,
+      "title": "Context 管线",
+      "task": "限制大输出、保留引用并记录 token 变化",
+      "phase": "状态与恢复",
+      "article": "ms-12-context-engineering"
+    },
+    {
+      "day": 12,
+      "title": "压缩回归",
+      "task": "检查长任务压缩后的约束与未完成项",
+      "phase": "状态与恢复",
+      "article": "lc-s08-context-compact"
+    },
+    {
+      "day": 13,
+      "title": "Memory 生命周期",
+      "task": "实现作用域、来源、去重、过期和回滚",
+      "phase": "状态与恢复",
+      "article": "lc-s09-memory"
+    },
+    {
+      "day": 14,
+      "title": "Task DAG",
+      "task": "加入 blockedBy、环检测与原子 claim",
+      "phase": "状态与恢复",
+      "article": "lc-s10-task-system"
+    },
+    {
+      "day": 15,
+      "title": "中断恢复",
+      "task": "后台执行一次任务，再取消并从 checkpoint 续跑",
+      "phase": "状态与恢复",
+      "article": "lc-s11-background-tasks"
+    },
+    {
+      "day": 16,
+      "title": "当前 MCP",
+      "task": "接入 server，并落实 host 权限策略",
+      "phase": "协议与协作",
+      "article": "lc-s14-mcp-tools"
+    },
+    {
+      "day": 17,
+      "title": "可验收 Skill",
+      "task": "制作说明、脚本/模板与 smoke test",
+      "phase": "协议与协作",
+      "article": "lc-s07-skill-loading"
+    },
+    {
+      "day": 18,
+      "title": "可信 Workflow",
+      "task": "实现 parallel/pipeline 与 journal/resume",
+      "phase": "协议与协作",
+      "article": "lc-s16-workflow-runtime"
+    },
+    {
+      "day": 19,
+      "title": "单/多 Agent 对照",
+      "task": "只在隔离或真实并行带来收益时拆分",
+      "phase": "协议与协作",
+      "article": "ms-08-multi-agent"
+    },
+    {
+      "day": 20,
+      "title": "浏览器与电脑操作",
+      "task": "只操作公开测试页，练观察、点击、状态确认与失败接管",
+      "phase": "协议与协作",
+      "article": "browser-cua"
+    },
+    {
+      "day": 21,
+      "title": "最小 Trace",
+      "task": "记录 step、版本、tool、cost、latency 与终止原因",
+      "phase": "生产验收",
+      "article": "hf-34-agent-telemetry-workshop"
+    },
+    {
+      "day": 22,
+      "title": "20 条回归集",
+      "task": "覆盖 outcome、trajectory、tool 与 safety",
+      "phase": "生产验收",
+      "article": "ms-10-observability-evaluation"
+    },
+    {
+      "day": 23,
+      "title": "攻击与故障注入",
+      "task": "注入恶意工具结果、超时、重复与过期知识",
+      "phase": "生产验收",
+      "article": "security"
+    },
+    {
+      "day": 24,
+      "title": "模型降档实验",
+      "task": "先用强模型立基线，再测小模型的成本与退化",
+      "phase": "生产验收",
+      "article": "ms-10-observability-evaluation"
+    },
+    {
+      "day": 25,
+      "title": "可交付版本",
+      "task": "补 CI、部署、canary、rollback 与复现 README",
+      "phase": "生产验收",
+      "article": "ms-16a-deployment"
+    },
+    {
+      "day": 26,
+      "title": "分轨一",
+      "task": "选项目阶梯：Coding 做真实 issue；Infra 集成 Harness；FDE 做客户访谈",
+      "phase": "岗位分轨",
+      "article": "project-ladder"
+    },
+    {
+      "day": 27,
+      "title": "分轨二",
+      "task": "Coding 做 worktree patch；Infra 做异步权限；FDE 写一周试点",
+      "phase": "岗位分轨",
+      "article": "lc-s13-agent-teams"
+    },
+    {
+      "day": 28,
+      "title": "分轨三",
+      "task": "Coding 跑测试 CI；Infra 做 journal/resume；FDE 做企业设计",
+      "phase": "岗位分轨",
+      "article": "project-story"
+    },
+    {
+      "day": 29,
+      "title": "分轨四",
+      "task": "Coding 做 PR review；Infra 故障注入；FDE 设计采用指标",
+      "phase": "岗位分轨",
+      "article": "failure-matrix"
+    },
+    {
+      "day": 30,
+      "title": "现场模拟",
+      "task": "按目标岗位做 45 分钟项目深挖与系统设计",
+      "phase": "岗位分轨",
+      "article": "system-design"
+    }
+  ]
+}

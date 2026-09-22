@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="2026 AI Agent 工程与岗位面试学习站：从 Agent Loop、Context、Harness 到生产评测与面试准备。" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>AI Agent 工程学习站</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到正文</a>
+    <header class="topbar">
+      <button class="icon-button mobile-only" id="menu-button" aria-label="打开目录" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="#/">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>AI Agent 工程学习站</span>
+      </a>
+      <nav class="topnav" aria-label="顶部导航" id="topnav"></nav>
+      <div class="top-actions">
+        <a class="github-link" id="github-link" href="https://github.com/qiansc" target="_blank" rel="noopener noreferrer" hidden>GitHub ↗</a>
+        <button class="search-trigger" id="search-button" aria-label="搜索知识站">
+          <span aria-hidden="true">⌕</span><span>搜索</span><kbd>⌘ K</kbd>
+        </button>
+        <button class="icon-button" id="theme-button" aria-label="切换为深色主题" title="切换主题">
+          <span class="theme-icon" aria-hidden="true">☼</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="学习目录">
+        <div class="sidebar-inner" id="sidebar-content"></div>
+      </aside>
+      <button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="关闭目录"></button>
+
+      <main id="main-content" tabindex="-1"></main>
+      <aside class="toc" id="toc" aria-label="本页目录"></aside>
+    </div>
+
+    <button class="complete-fab" id="complete-button" type="button" aria-pressed="false" hidden><span class="complete-fab-icon" aria-hidden="true">✓</span><span class="complete-fab-label">我学完了</span></button>
+
+    <dialog class="search-dialog" id="search-dialog">
+      <form method="dialog" class="search-shell">
+        <div class="search-input-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="搜索概念、协议、面试题……" autocomplete="off" />
+          <button class="search-close" value="cancel" aria-label="关闭搜索">Esc</button>
+        </div>
+        <div class="search-results" id="search-results" role="listbox"></div>
+      </form>
+    </dialog>
+
+    <noscript>这个学习站需要 JavaScript 才能显示目录、搜索和文章。Markdown 正文可在 docs/ 目录直接阅读。</noscript>
+    <script src="./assets/config.js"></script>
+    <script src="./assets/app.js"></script>
+  </body>
+</html>

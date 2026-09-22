@@ -1,0 +1,6 @@
+_site
+data
+__pycache__
+.git
+.github
+*.pyc
